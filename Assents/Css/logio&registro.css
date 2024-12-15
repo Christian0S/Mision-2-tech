@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente moderna */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e9ecef; /* Fondo más suave */
+}
+
+.form-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+    width: 100%;
+    max-width: 400px; /* Ancho máximo más grande */
+    transition: transform 0.3s ease-in-out; /* Animación al cambiar el tamaño */
+}
+
+h1 {
+    text-align: center;
+    color: #343a40; /* Color más oscuro */
+    margin-bottom: 20px; /* Espaciado */
+    font-size: 24px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ced4da; /* Borde más suave */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #f8f9fa; /* Fondo suave */
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007bff; /* Color de borde al hacer foco */
+    background-color: #fff; /* Fondo blanco al hacer foco */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #0056b3; /* Sombra al pasar el cursor */
+}
+
+button:active {
+    background: #003366; /* Color más oscuro al hacer clic */
+}
+
+.toggle-link {
+    text-align: center;
+    display: block;
+    margin-top: 15px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.toggle-link:hover {
+    text-decoration: underline;
+}
+
+.toggle-link:focus {
+    outline: none;
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 20px; /* Menos padding en pantallas pequeñas */
+    }
+
+    h1 {
+        font-size: 20px; /* Ajuste en tamaño de fuente */
+    }
+}

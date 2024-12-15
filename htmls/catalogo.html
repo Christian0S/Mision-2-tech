@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo - Proyecto Misión 2</title>
+    <link rel="stylesheet" href="/Assents/Css/Catalogo/catalogo.css" />
+    <link rel="stylesheet" href="/Assents/Css/general.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <a class="logo" href="/index.html">
+        <img src="/logo.webp" alt="Logo" />
+        <h1>NextTech</h1>
+      </a>
+      <button class="menu-btn" onclick="toggleNav()">☰</button>
+      <nav>
+        <ul>
+          <li><a href="/index.html">Inicio</a></li>
+          <li><a href="/htmls/catalogo.html">Catálogo</a></li>
+          <li><a href="/htmls/carrito.html">Carrito</a></li>
+          <!-- Botón de cerrar sesión solo visible si la sesión está iniciada -->
+          <li id="cerrar-sesion" style="display: none">
+            <a href="#" onclick="cerrarSesion()">Cerrar Sesión</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <h1 style="text-align: center">Catálogo de Productos</h1>
+
+      <!-- Barra Lateral de Filtro -->
+      <aside class="sidebar">
+        <h3>Filtrar por Categoría</h3>
+        <ul>
+          <li>
+            <label
+              ><input
+                type="checkbox"
+                id="filtro-promociones"
+                onclick="filtrarProductos()"
+              />
+              Promociones</label
+            >
+          </li>
+          <li>
+            <label
+              ><input
+                type="checkbox"
+                id="filtro-destacados"
+                onclick="filtrarProductos()"
+              />
+              Destacados</label
+            >
+          </li>
+          <li>
+            <label
+              ><input
+                type="checkbox"
+                id="filtro-sin-categoria"
+                onclick="filtrarProductos()"
+              />
+              Sin Categoría</label
+            >
+          </li>
+          <li>
+            <label
+              ><input
+                type="checkbox"
+                id="filtro-todos"
+                onclick="filtrarProductos()"
+                checked="true"
+              />
+              Mostrar Todos</label
+            >
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Lista de Productos -->
+      <div class="product-list" id="producto-lista">
+        <!-- Aquí se llenarán los productos dinámicamente -->
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <img src="/logo.webp" alt="Logo de la Empresa" />
+        <p>Dirección: Calle Ficticia 123, Ciudad Ejemplo</p>
+        <p>&copy; 2024 Nuestra Tienda. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <script src="/Assents/Js/productos.js"></script>
+    <script src="/Assents/Js/general.js"></script>
+  </body>
+</html>

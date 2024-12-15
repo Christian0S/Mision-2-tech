@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto Misión 2 - E-commerce</title>
+    <link rel="stylesheet" href="Assents/Css/index.css" />
+    <link rel="stylesheet" href="Assents/Css/general.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <a class="logo" href="/index.html">
+        <img src="/logo.webp" alt="Logo" />
+        <h1>NextTech</h1>
+      </a>
+      <button class="menu-btn" onclick="toggleNav()">☰</button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="htmls/catalogo.html">Catálogo</a></li>
+          <li><a href="htmls/carrito.html">Carrito</a></li>
+          <li><a href="#contacto">contacto</a></li>
+          <!-- Botón de cerrar sesión solo visible si la sesión está iniciada -->
+          <li id="cerrar-sesion" style="display: none">
+            <a href="#" onclick="cerrarSesion()">Cerrar Sesión</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <section class="hero">
+        <h1>Bienvenido a nuestra tienda en línea</h1>
+        <p>
+          Explora nuestro catálogo de productos y disfruta de una experiencia de
+          compra fácil y rápida.
+        </p>
+        <a href="htmls/catalogo.html" class="btn">Ver Catálogo</a>
+      </section>
+
+      <!-- Descripción de la empresa -->
+      <section class="about">
+        <h2>Sobre Nosotros</h2>
+        <p>
+          Somos una tienda en línea especializada en productos de calidad para
+          el hogar. Nos esforzamos por ofrecer una experiencia de compra única,
+          con un catálogo variado y un servicio al cliente excepcional. Nuestra
+          misión es llevar productos innovadores a tu hogar, ¡a precios
+          competitivos!
+        </p>
+      </section>
+
+      <!-- Productos Destacados -->
+      <section class="destacados">
+        <h2>Productos Destacados</h2>
+        <div class="slider">
+          <button class="prev">❮</button>
+          <div class="slider-container" id="destacados"></div>
+          <button class="next">❯</button>
+        </div>
+      </section>
+
+      <!-- Promociones Especiales -->
+      <section class="promociones">
+        <h2>Promociones Especiales</h2>
+        <div class="slider">
+          <button class="prev">❮</button>
+          <div class="slider-container" id="promociones"></div>
+          <button class="next">❯</button>
+        </div>
+      </section>
+
+      <!-- Sección de Contacto -->
+      <section class="contacto" id="contacto">
+        <h2>Contáctenos</h2>
+        <p>
+          Por favor, complete el formulario para ponerse en contacto con
+          nosotros.
+        </p>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" />
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+        <div id="notification" class="notification"></div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <p>Dirección: Calle Ficticia 123, Ciudad Ejemplo</p>
+        <p>&copy; 2024 Nuestra Tienda. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="Assents/Js/Index.js"></script>
+    <script src="Assents/Js/productos.js"></script>
+    <script src="Assents/Js/general.js"></script>
+  </body>
+</html>

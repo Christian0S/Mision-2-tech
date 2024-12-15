@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proceder al Pago</title>
+    <link rel="stylesheet" href="/Assents/Css/pagos/pagos.css" />
+    <link rel="stylesheet" href="/Assents/Css/general.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="/index.html">
+        <img src="/logo.webp" alt="Logo" />
+        <h1>NextTech</h1>
+      </a>
+      <button class="menu-btn" onclick="toggleNav()">☰</button>
+      <nav>
+        <ul>
+          <li><a href="/index.html">Inicio</a></li>
+          <li><a href="/htmls/catalogo.html">Catálogo</a></li>
+          <li><a href="/htmls/carrito.html">Carrito</a></li>
+          <li id="cerrar-sesion" style="display: none">
+            <a href="#" onclick="cerrarSesion()">Cerrar Sesión</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Carrito de Compras</h1>
+      <div id="carritoContainer">
+        <!-- Aquí se mostrará el contenido del carrito -->
+      </div>
+      <button onclick="procederAlPago()">Proceder al Pago</button>
+
+      <div id="modalPago" style="display: none">
+        <h2>Selecciona tu método de pago</h2>
+        <select id="metodoPago" onchange="mostrarFormularioPago()">
+          <option value="">Seleccionar Método</option>
+          <option value="PSE">PSE (Pago Seguro en Línea)</option>
+          <option value="Nequi">Nequi</option>
+          <option value="Tarjeta">Tarjeta de Crédito/Débito</option>
+        </select>
+
+        <div id="formularioPSE" style="display: none">
+          <label for="pseCuenta">Número de cuenta PSE:</label>
+          <input
+            type="text"
+            id="pseCuenta"
+            placeholder="Ingrese el número de cuenta"
+          />
+        </div>
+
+        <div id="formularioNequi" style="display: none">
+          <label for="nequiNumero">Número de celular Nequi:</label>
+          <input
+            type="text"
+            id="nequiNumero"
+            placeholder="Ingrese su número de celular"
+          />
+        </div>
+
+        <div id="formularioTarjeta" style="display: none">
+          <label for="tarjetaNumero">Número de tarjeta (16 dígitos):</label>
+          <input
+            type="text"
+            id="tarjetaNumero"
+            placeholder="Ingrese el número de la tarjeta"
+          />
+          <label for="tarjetaFecha">Fecha de vencimiento (MM/AA):</label>
+          <input type="text" id="tarjetaFecha" placeholder="MM/AA" />
+          <label for="tarjetaCVV">Código CVV:</label>
+          <input type="text" id="tarjetaCVV" placeholder="CVV (3 dígitos)" />
+        </div>
+
+        <button onclick="validarPago()">Realizar Pago</button>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <img src="/logo.webp" alt="Logo de la Empresa" />
+        <p>Dirección: Calle Ficticia 123, Ciudad Ejemplo</p>
+        <p>&copy; 2024 Nuestra Tienda. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="/Assents/Js/pagos/pagos.js"></script>
+    <script src="/Assents/Js/general.js"></script>
+  </body>
+</html>

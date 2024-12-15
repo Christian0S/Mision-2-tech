@@ -1,0 +1,348 @@
+/* Main content styles */
+main {
+  padding: 20px;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #ffeb3b;  /* Amarillo suave */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 30px 10px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.hero .btn {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: #444;
+}
+
+/* About section */
+.about {
+  padding: 30px 20px;
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 30px 10px;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.about p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #666;
+}
+
+/* Featured Products and Promotions */
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+  
+}
+
+/* Slider container */
+.slider {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%; /* Asegura que el contenedor del slider ocupe todo el ancho disponible */
+  max-width: none; /* Eliminamos el max-width para que no limite el tamaño */
+}
+
+/* Contenedor del slider */
+.slider-container {
+  display: inline-flex; /* Esto ayuda a que los productos estén en línea */
+  justify-content: flex-start;
+  transition: transform 0.3s ease;
+  will-change: transform;
+  gap: 10px; /* Espaciado entre los productos */
+}
+
+
+.producto-item {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  background-color: white;
+  padding: 15px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  width: 250px; /* Fijamos el ancho */
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+
+.producto-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.producto-item img {
+  align-items: center;
+  width: 200px;
+  height: 150px;
+  border-radius: 5px;
+  object-fit: cover; /* Asegura que la imagen se recorte si es necesario para ajustar su tamaño */
+  margin-bottom: 10px;
+}
+
+.producto-item p {
+  margin: 5px 0; /* Espaciado entre párrafos */
+    font-size: 14px; /* Ajusta el tamaño de la fuente si es necesario */
+    line-height: 1.5;
+  color: #444;
+}
+
+.producto-item button {
+  padding: 10px 20px;
+  background-color: #ff9800; /* Naranja */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.producto-item button:hover {
+  background-color: #e68900;
+}
+
+/* Flechas de navegación del slider */
+.slider .prev, .slider .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.slider .prev {
+  left: 10px;
+}
+
+.slider .next {
+  right: 10px;
+}
+
+.slider .prev:hover, .slider .next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Contacto Section */
+.contacto {
+
+  padding: 40px 20px;
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 30px 10px;
+}
+
+.contacto h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contacto p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contacto form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contacto .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.contacto .form-group label {
+  font-size: 1.1rem;
+  color: #444;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contacto .form-group input,
+.contacto .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+.contacto .form-group textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+.contacto button {
+  padding: 10px 20px;
+  background-color: #ff9800; /* Naranja */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.contacto button:hover {
+  background-color: #e68900;
+}
+
+/* Estilos para la notificación */
+.notification {
+  display: none;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 1rem;
+  max-width: 400px;
+  margin: 20px auto;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.notification.success {
+  background-color: #4caf50; /* Verde */
+  color: white;
+}
+
+.notification.error {
+  background-color: #f44336; /* Rojo */
+  color: white;
+}
+
+.notification.show {
+  display: block;
+  opacity: 1;
+}
+
+/* Media Queries for responsiveness */
+
+/* Mobile (portrait) */
+@media (max-width: 600px) {
+  .hero h1 {
+      font-size: 1.8rem;
+  }
+
+  .hero p {
+      font-size: 1rem;
+  }
+
+  .producto-item {
+    width: 320px;
+  }
+
+  footer p {
+      font-size: 0.9rem;
+  }
+  .contacto h2 {
+    font-size: 1.8rem;
+  }
+
+  .contacto p {
+    font-size: 1rem;
+  }
+
+  .contacto .form-group label {
+    font-size: 1rem;
+  }
+
+  .contacto button {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .hero h1 {
+      font-size: 2rem;
+  }
+
+  .hero p {
+      font-size: 1.1rem;
+  }
+
+  .producto-item {
+    width: 100%;
+  }
+  .contacto h2 {
+    font-size: 2rem;
+  }
+
+  .contacto p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .hero h1 {
+      font-size: 3rem;
+  }
+
+  .hero p {
+      font-size: 1.3rem;
+  }
+  .contacto h2 {
+    font-size: 2.5rem;
+  }
+
+  .contacto p {
+    font-size: 1.2rem;
+  }
+}

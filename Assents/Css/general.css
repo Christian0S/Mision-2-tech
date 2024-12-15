@@ -1,0 +1,158 @@
+/* General styles for the entire website */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    position: relative; /* Asegura que el botón de menú esté posicionado correctamente */
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+header .logo img {
+    height: 60px;
+    border-radius: 50px;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-start; /* Alinear los elementos a la izquierda */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer img {
+    height: 30px;
+    border-radius: 50px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+.menu-btn{
+    display: none;
+}
+/* Responsive Styles */
+
+/* Para pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+    header {
+        padding: 0 20px; /* Reducir el espaciado lateral */
+        flex-direction: column; /* Cambiar la dirección del header a columna */
+        align-items: flex-start; /* Alinear el contenido a la izquierda */
+        text-align: center;
+    }
+
+    header .logo {
+        gap: 20px; /* Reducir el espacio entre la imagen y el texto */
+    }
+
+    header nav {
+        display: none; /* Ocultar el nav en pantallas pequeñas */
+        flex-direction: column; /* Asegurar que los enlaces estén en columna */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Cambiar los enlaces a columna */
+        margin-top: 10px;
+        text-align: left;
+    }
+
+    header nav ul li {
+        margin-left: 0; /* Eliminar el margen izquierdo */
+        margin-bottom: 10px; /* Espacio entre los elementos */
+    }
+
+    footer {
+        padding: 20px 10px; /* Reducir el espaciado en pantallas pequeñas */
+    }
+
+    .menu-btn {
+        display: flex;
+        align-items: center;
+        background-color: #333;
+        color: white;
+        border: none;
+        font-size: 20px;
+        padding: 10px;
+        cursor: pointer;
+        position: absolute;
+        font-size: 30px;
+        top: 14px;
+        right: 20px;
+    }
+}
+
+/* Para pantallas pequeñas (teléfonos móviles) */
+@media (max-width: 480px) {
+    header {
+        padding: 0 10px; /* Reducir aún más el padding */
+    }
+
+    header .logo {
+        gap: 10px; /* Espacio pequeño entre logo e imagen */
+    }
+
+    header nav {
+        display: none; /* Asegura que el nav esté oculto */
+    }
+
+    footer {
+        padding: 20px 5px; /* Reducir el padding en dispositivos móviles */
+    }
+
+    footer img {
+        height: 25px; /* Reducir el tamaño del logo en el pie de página */
+    }
+}
+
+/* Mostrar el nav al hacer clic en el botón */
+.nav-active {
+    display: flex !important; /* Asegura que el nav se muestre cuando está activado */
+}
